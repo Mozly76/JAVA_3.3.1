@@ -1,8 +1,8 @@
 package ru.netology.radioman.service;
 
 public class Radio {
-    public int numberCurrentRadioStation;
-    public int soundVolume;
+    private int numberCurrentRadioStation;
+    private int soundVolume;
 
     // Радиостанции
     public void setToMaxNumberRadioStation() {
@@ -30,8 +30,7 @@ public class Radio {
     public void nextNumberCurrentRadioStation() {
         if (numberCurrentRadioStation < 9) {
             numberCurrentRadioStation = numberCurrentRadioStation + 1;
-        }
-        if (numberCurrentRadioStation >= 9) {
+        } else {
             numberCurrentRadioStation = 0;
         }
     }
@@ -39,8 +38,7 @@ public class Radio {
     public void prevNumberCurrentRadioStation() {
         if (numberCurrentRadioStation > 0) {
             numberCurrentRadioStation = numberCurrentRadioStation - 1;
-        }
-        if (numberCurrentRadioStation <= 0) {
+        } else {
             numberCurrentRadioStation = 9;
         }
     }
@@ -71,8 +69,7 @@ public class Radio {
     public void increaseSoundVolume() {
         if (soundVolume < 10) {
             soundVolume = soundVolume + 1;
-        }
-        if (soundVolume >= 10) {
+        } else {
             soundVolume = 10;
         }
     }
@@ -80,8 +77,7 @@ public class Radio {
     public void decreaseSoundVolume() {
         if (soundVolume > 0) {
             soundVolume = soundVolume - 1;
-        }
-        if (soundVolume <= 0) {
+        } else {
             soundVolume = 0;
         }
     }
